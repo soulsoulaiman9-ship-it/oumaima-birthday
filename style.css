@@ -297,4 +297,22 @@ animation:pulse 2s infinite;
 50%{
 transform:scale(1.2);
 }
+  .sparkle{
+position:fixed;
+pointer-events:none;
+font-size:18px;
+z-index:9999;
+animation:sparkleFade 1s forwards;
+}
+
+@keyframes sparkleFade{
+from{
+opacity:1;
+transform:scale(1);
+}
+to{
+opacity:0;
+transform:translateY(-20px) scale(1.8);
+}
+}
 }
