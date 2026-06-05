@@ -41,3 +41,94 @@ reasons.forEach((r,i)=>{
  s.onclick=()=>box.innerHTML=`#${i+1}<br>${r}`;
  stars.appendChild(s);
 });
+
+function startMuseum(){
+
+document.querySelector(".hero").style.display="none";
+
+document.getElementById("museum").classList.remove("hidden");
+
+const music=document.getElementById("bgMusic");
+
+music.play().catch(err=>{
+console.log(err);
+});
+}
+
+/* FLOATING HEARTS */
+
+setInterval(()=>{
+
+const heart=document.createElement("div");
+
+heart.className="heart";
+
+const hearts=["💙","🤍","🎀","✨"];
+
+heart.innerHTML=
+hearts[Math.floor(Math.random()*hearts.length)];
+
+heart.style.left=Math.random()*100+"%";
+
+heart.style.fontSize=
+(20+Math.random()*20)+"px";
+
+document
+.querySelector(".floating-hearts")
+.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},10000);
+
+},1000);
+
+/* GALLERY LIGHTBOX */
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+document
+.querySelectorAll(".gallery img")
+.forEach(img=>{
+
+img.addEventListener("click",()=>{
+
+document.getElementById(
+"lightbox"
+).style.display="flex";
+
+document.getElementById(
+"lightboxImg"
+).src=img.src;
+
+});
+
+});
+
+document.getElementById(
+"lightbox"
+).onclick=()=>{
+
+document.getElementById(
+"lightbox"
+).style.display="none";
+
+};
+
+});
+
+/* FINAL SURPRISE */
+
+function revealSurprise(){
+
+const surprise=
+document.getElementById("surprise");
+
+surprise.style.display="block";
+
+window.scrollTo({
+top:document.body.scrollHeight,
+behavior:"smooth"
+});
+
+}
