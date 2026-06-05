@@ -106,7 +106,6 @@ reasons.forEach((r,i)=>{
 });
 
 
-}
 
 /* FLOATING HEARTS */
 
