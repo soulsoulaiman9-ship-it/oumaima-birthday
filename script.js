@@ -212,6 +212,26 @@ sparkle.remove();
 },1000);
 
 });
+document.addEventListener("DOMContentLoaded",()=>{
+
+const giftBox =
+document.getElementById("giftBox");
+
+if(giftBox){
+
+giftBox.onclick = ()=>{
+
+giftBox.style.display="none";
+
+document.getElementById("finalLetter")
+.style.display="block";
+
+createConfetti();
+
+};
+
 }
+
+});
 
 
