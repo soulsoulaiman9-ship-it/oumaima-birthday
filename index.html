@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Museum of 8 Years of Us</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="floating-hearts"></div>
+
+<div id="lightbox" class="lightbox">
+    <img id="lightboxImg">
+</div>
 
 <audio id="bgMusic" loop>
-  <source src="music/Mariage d'Amour - Paul de Senneville __ Jacob's Piano [FoCG-WNsZio]" type="audio/mpeg">
+  <source src="music/song" type="audio/mpeg">
 </audio>
 
 <div class="hero">
@@ -32,13 +38,51 @@
 </section>
 
 <section>
-<h2>📸 Memory Gallery</h2>
+<h2>🎀 📸 Memory Gallery 🎀</h2>
+
 <div class="gallery">
-<img src="images/1.jpg"><img src="images/2.jpg"><img src="images/3.jpg">
-<img src="images/4.jpg"><img src="images/5.jpg"><img src="images/6.jpg">
-<img src="images/7.jpg"><img src="images/8.jpg">
+
+<div class="polaroid">
+<img src="images/1.jpg">
+<p>💙 Memory #1</p>
 </div>
-<p>Replace these files with your real photos.</p>
+
+<div class="polaroid">
+<img src="images/2.jpg">
+<p>💙 Memory #2</p>
+</div>
+
+<div class="polaroid">
+<img src="images/3.jpg">
+<p>💙 Memory #3</p>
+</div>
+
+<div class="polaroid">
+<img src="images/4.jpg">
+<p>💙 Memory #4</p>
+</div>
+
+<div class="polaroid">
+<img src="images/5.jpg">
+<p>💙 Memory #5</p>
+</div>
+
+<div class="polaroid">
+<img src="images/6.jpg">
+<p>💙 Memory #6</p>
+</div>
+
+<div class="polaroid">
+<img src="images/7.jpg">
+<p>💙 Memory #7</p>
+</div>
+
+<div class="polaroid">
+<img src="images/8.jpg">
+<p>💙 Memory #8</p>
+</div>
+
+</div>
 </section>
 
 <section>
@@ -137,7 +181,9 @@ You got through them too.</p>
 
 <p>Forever your friend 💙</p>
 
-<button onclick="document.getElementById('surprise').style.display='block'">One Last Surprise</button>
+<button onclick="revealSurprise()">
+💙🎀 One Last Surprise 🎀💙
+</button>
 
 <p id="surprise" style="display:none">
 You are now officially a permanent exhibit in my heart's museum.
