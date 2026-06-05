@@ -105,36 +105,30 @@ reasons.forEach((r,i)=>{
  stars.appendChild(s);
 });
 
-
-
-/* FLOATING HEARTS */
-
 setInterval(()=>{
+    const heart=document.createElement("div");
 
-const heart=document.createElement("div");
+    heart.className="heart";
 
-heart.className="heart";
+    const hearts=["💙","🤍","🎀","✨"];
 
-const hearts=["💙","🤍","🎀","✨"];
+    heart.innerHTML=
+    hearts[Math.floor(Math.random()*hearts.length)];
 
-heart.innerHTML=
-hearts[Math.floor(Math.random()*hearts.length)];
+    heart.style.left=Math.random()*100+"%";
 
-heart.style.left=Math.random()*100+"%";
+    heart.style.fontSize=
+    (20+Math.random()*20)+"px";
 
-heart.style.fontSize=
-(20+Math.random()*20)+"px";
+    document
+    .querySelector(".floating-hearts")
+    .appendChild(heart);
 
-document
-.querySelector(".floating-hearts")
-.appendChild(heart);
-
-setTimeout(()=>{
-heart.remove();
-},10000);
+    setTimeout(()=>{
+        heart.remove();
+    },10000);
 
 },1000);
-
 /* GALLERY LIGHTBOX */
 
 document.addEventListener("DOMContentLoaded",()=>{
