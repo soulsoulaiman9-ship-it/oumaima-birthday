@@ -24,6 +24,62 @@ const reasons=[
 "The person you're becoming",
 "Simply being you"
 ];
+document.getElementById("teddy").onclick = () => {
+const speech = document.getElementById("teddySpeech");
+
+speech.style.display =
+speech.style.display === "block"
+? "none"
+: "block";
+};
+document.getElementById("balloon").onclick = () => {
+
+document.getElementById("balloon").style.display="none";
+
+document.getElementById("birthdayPopup").style.display="block";
+
+createConfetti();
+};
+function createConfetti(){
+
+for(let i=0;i<100;i++){
+
+const confetti=document.createElement("div");
+
+confetti.innerHTML=["💙","🎀","✨","🎉","💖"][Math.floor(Math.random()*5)];
+
+confetti.style.position="fixed";
+confetti.style.left=Math.random()*100+"vw";
+confetti.style.top="-20px";
+confetti.style.fontSize="30px";
+confetti.style.zIndex="9999";
+
+document.body.appendChild(confetti);
+
+confetti.animate([
+{transform:"translateY(0px)"},
+{transform:"translateY(120vh)"}
+],{
+duration:3000+Math.random()*3000
+});
+
+setTimeout(()=>confetti.remove(),6000);
+}
+}
+document.getElementById("secretHeart").onclick = () => {
+alert("You found the hidden memory! 💙");
+};
+const notes = [
+"You're my favorite person.",
+"8 years later and you're still stuck with me and you will always be .",
+"You make ordinary days better.",
+"Your smile should alwasy be as bright as the sun.",
+"Thank you for existing."
+];
+
+document.getElementById("fortuneCookie").onclick=()=>{
+alert(notes[Math.floor(Math.random()*notes.length)]);
+};
 
 function startMuseum(){
 document.querySelector(".hero").style.display="none";
@@ -121,14 +177,14 @@ document.getElementById(
 
 function revealSurprise(){
 
-const surprise=
-document.getElementById("surprise");
+document.getElementById("surprise").style.display="block";
 
-surprise.style.display="block";
+createConfetti();
 
-window.scrollTo({
-top:document.body.scrollHeight,
-behavior:"smooth"
-});
+setTimeout(()=>{
+alert("💙 Happy Birthday Oumaima 💙");
+},1000);
 
 }
+
+
