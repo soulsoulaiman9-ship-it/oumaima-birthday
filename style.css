@@ -314,5 +314,22 @@ to{
 opacity:0;
 transform:translateY(-20px) scale(1.8);
 }
+#giftBox{
+font-size:120px;
+text-align:center;
+cursor:pointer;
+padding:40px;
+animation:giftBounce 2s infinite;
+}
+
+#giftBox p{
+font-size:18px;
+margin-top:10px;
+}
+
+@keyframes giftBounce{
+50%{
+transform:translateY(-10px);
+}
 }
 }
