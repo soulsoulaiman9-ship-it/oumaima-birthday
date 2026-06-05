@@ -223,3 +223,66 @@ opacity:1;
 transform:translateY(0);
 }
 }
+#teddy{
+position:fixed;
+bottom:20px;
+right:20px;
+font-size:70px;
+cursor:pointer;
+z-index:999;
+animation:bounce 2s infinite;
+}
+
+#teddySpeech{
+display:none;
+position:absolute;
+bottom:80px;
+right:0;
+background:white;
+padding:12px;
+border-radius:15px;
+width:180px;
+box-shadow:0 0 15px rgba(0,0,0,.2);
+}
+
+@keyframes bounce{
+50%{transform:translateY(-10px);}
+}
+#balloon{
+position:fixed;
+left:30px;
+bottom:50px;
+font-size:100px;
+cursor:pointer;
+animation:floatBalloon 3s infinite;
+z-index:999;
+}
+
+@keyframes floatBalloon{
+50%{
+transform:translateY(-20px);
+}
+}
+
+#birthdayPopup{
+display:none;
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+background:white;
+padding:40px;
+border-radius:20px;
+font-size:24px;
+text-align:center;
+box-shadow:0 0 30px rgba(0,0,0,.3);
+z-index:1000;
+}
+#secretHeart{
+position:absolute;
+top:1700px;
+right:50px;
+font-size:30px;
+cursor:pointer;
+}
+}
