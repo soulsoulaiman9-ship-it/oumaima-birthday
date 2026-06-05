@@ -184,7 +184,27 @@ createConfetti();
 setTimeout(()=>{
 alert("💙 Happy Birthday Oumaima 💙");
 },1000);
+document.addEventListener("mousemove",(e)=>{
 
+const sparkle=document.createElement("div");
+
+sparkle.className="sparkle";
+
+const icons=["✨","💙","🎀","🤍"];
+
+sparkle.innerHTML=
+icons[Math.floor(Math.random()*icons.length)];
+
+sparkle.style.left=e.clientX+"px";
+sparkle.style.top=e.clientY+"px";
+
+document.body.appendChild(sparkle);
+
+setTimeout(()=>{
+sparkle.remove();
+},1000);
+
+});
 }
 
 
