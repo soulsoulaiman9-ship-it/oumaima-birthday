@@ -82,9 +82,16 @@ alert(notes[Math.floor(Math.random()*notes.length)]);
 };
 
 function startMuseum(){
+
 document.querySelector(".hero").style.display="none";
-document.getElementById("museum").classList.remove("hidden");
-document.getElementById("bgMusic").play().catch(()=>{});
+
+document.getElementById("museum")
+.classList.remove("hidden");
+
+document.getElementById("mainMusic")
+.play()
+.catch(()=>{});
+
 }
 
 const stars=document.getElementById("stars");
@@ -98,17 +105,7 @@ reasons.forEach((r,i)=>{
  stars.appendChild(s);
 });
 
-function startMuseum(){
 
-document.querySelector(".hero").style.display="none";
-
-document.getElementById("museum").classList.remove("hidden");
-
-const music=document.getElementById("bgMusic");
-
-music.play().catch(err=>{
-console.log(err);
-});
 }
 
 /* FLOATING HEARTS */
@@ -177,13 +174,23 @@ document.getElementById(
 
 function revealSurprise(){
 
-document.getElementById("surprise").style.display="block";
+document.getElementById("surprise")
+.style.display="block";
 
 createConfetti();
 
-setTimeout(()=>{
-alert("💙 Happy Birthday Oumaima 💙");
-},1000);
+/* stop Oghniya */
+document.getElementById("mainMusic").pause();
+
+/* start Mariage d'Amour */
+const finalSong =
+document.getElementById("bgMusic");
+
+finalSong.currentTime = 0;
+
+finalSong.play().catch(()=>{});
+
+}
 document.addEventListener("mousemove",(e)=>{
 
 const sparkle=document.createElement("div");
