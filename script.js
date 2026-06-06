@@ -224,6 +224,155 @@ createConfetti();
 };
 
 }
+document.addEventListener("DOMContentLoaded", () => {
+  const door = document.getElementById("finalDoor");
+
+  if (door) {
+    door.style.opacity = "0";
+    door.style.transform = "translateY(20px)";
+
+    setTimeout(() => {
+      door.style.transition = "1.5s ease";
+      door.style.opacity = "1";
+      door.style.transform = "translateY(0px)";
+    }, 1000);
+  }
+});
+function startFinalCeremony(){
+
+  const door = document.getElementById("finalDoor");
+
+  door.innerHTML = "🚪<p>The door is opening...</p>";
+
+  setTimeout(() => {
+    door.style.opacity = "0";
+    door.style.transform = "scale(1.2)";
+  }, 800);
+
+  setTimeout(() => {
+    document.getElementById("museum").style.display="none";
+    document.getElementById("finalTransition").classList.remove("hidden");
+
+    createStars();
+
+    typeWriter(text, 30);
+  }, 1500);
+}
+
+  const text = `
+🏛️ Final Museum Closing Ceremony
+
+You have reached the last room.
+
+...
+
+Or at least that's what museums usually say.
+
+...
+
+The problem is that our story isn't finished yet.
+
+Museum Closing Report
+
+Artifacts Collected: Memories
+
+Treasures Preserved: Moments
+
+Most Valuable Exhibit: Oumaima
+
+━━━━━━━━━━━━━━
+
+After reviewing every room,
+
+every photo,
+
+every letter,
+
+every laugh,
+
+every conversation,
+
+and every memory...
+
+the museum has reached one conclusion.
+
+...
+
+The best thing that happened in these eight years
+
+wasn't any particular memory.
+
+It wasn't any single photo in this gallery.
+
+It wasn't any specific day.
+
+The best thing that happened in these eight years
+
+was having you there for all of them.
+
+💙
+
+you're still one of my favorite chapters.
+
+Thank you for visiting
+
+The Museum of 8 Years of Us.
+
+This exhibit will remain open indefinitely.
+
+💙
+`;
+
+  typeWriter(text, 30);
+}
+function startLoadingGlitch(){
+  let percent = 99;
+  const loadingText = document.getElementById("loadingText");
+
+  setInterval(()=>{
+    loadingText.innerText = percent + "%";
+  }, 800);
+}
+function createStars(){
+  const canvas = document.getElementById("starsCanvas");
+  const ctx = canvas.getContext("2d");
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  let stars = [];
+
+  for(let i=0;i<150;i++){
+    stars.push({
+      x: Math.random()*canvas.width,
+      y: Math.random()*canvas.height,
+      r: Math.random()*2,
+      d: Math.random()*1
+    });
+  }
+
+  function draw(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    ctx.fillStyle="white";
+
+    for(let s of stars){
+      ctx.beginPath();
+      ctx.arc(s.x, s.y, s.r, 0, Math.PI*2);
+      ctx.fill();
+
+      s.y += s.d;
+
+      if(s.y > canvas.height){
+        s.y = 0;
+        s.x = Math.random()*canvas.width;
+      }
+    }
+
+    requestAnimationFrame(draw);
+  }
+
+  draw();
+}
 
 });
 
