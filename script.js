@@ -250,16 +250,13 @@ function startFinalCeremony(){
   }, 800);
 
   setTimeout(() => {
-    document.getElementById("museum").style.display="none";
+
+    document.getElementById("museum").style.display = "none";
     document.getElementById("finalTransition").classList.remove("hidden");
 
     createStars();
 
-    typeWriter(text, 30);
-  }, 1500);
-}
-
-  const text = `
+    const text = `
 🏛️ Final Museum Closing Ceremony
 
 You have reached the last room.
@@ -275,23 +272,16 @@ The problem is that our story isn't finished yet.
 Museum Closing Report
 
 Artifacts Collected: Memories
-
 Treasures Preserved: Moments
-
 Most Valuable Exhibit: Oumaima
 
 ━━━━━━━━━━━━━━
 
 After reviewing every room,
-
 every photo,
-
 every letter,
-
 every laugh,
-
 every conversation,
-
 and every memory...
 
 the museum has reached one conclusion.
@@ -303,11 +293,9 @@ The best thing that happened in these eight years
 wasn't any particular memory.
 
 It wasn't any single photo in this gallery.
-
 It wasn't any specific day.
 
 The best thing that happened in these eight years
-
 was having you there for all of them.
 
 💙
@@ -315,7 +303,6 @@ was having you there for all of them.
 you're still one of my favorite chapters.
 
 Thank you for visiting
-
 The Museum of 8 Years of Us.
 
 This exhibit will remain open indefinitely.
@@ -323,8 +310,10 @@ This exhibit will remain open indefinitely.
 💙
 `;
 
-  typeWriter(text, 30);
-)
+    typeWriter(text, 30);
+
+  }, 1500);
+}
 function startLoadingGlitch(){
   let percent = 99;
   const loadingText = document.getElementById("loadingText");
@@ -342,18 +331,18 @@ function createStars(){
 
   let stars = [];
 
-  for(let i=0;i<150;i++){
+  for(let i = 0; i < 150; i++){
     stars.push({
-      x: Math.random()*canvas.width,
-      y: Math.random()*canvas.height,
-      r: Math.random()*2,
-      d: Math.random()*1
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      r: Math.random() * 2,
+      d: Math.random() * 1
     });
   }
 
   function draw(){
     ctx.clearRect(0,0,canvas.width,canvas.height);
-    ctx.fillStyle="white";
+    ctx.fillStyle = "white";
 
     for(let s of stars){
       ctx.beginPath();
@@ -364,7 +353,7 @@ function createStars(){
 
       if(s.y > canvas.height){
         s.y = 0;
-        s.x = Math.random()*canvas.width;
+        s.x = Math.random() * canvas.width;
       }
     }
 
