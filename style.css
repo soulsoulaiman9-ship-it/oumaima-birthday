@@ -431,5 +431,8 @@ margin-top:10px;
 #finalDoor p{
   margin:8px 0;
 }
+#loadingWrap{
+  display:none;
+}
 }
 
