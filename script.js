@@ -323,6 +323,37 @@ function startLoadingGlitch(){
     loadingText.innerText = percent + "%";
   }, 800);
 }
+function typeWriter(text, speed){
+
+  const element =
+  document.getElementById("finalText");
+
+  element.innerHTML = "";
+
+  let i = 0;
+
+  function type(){
+
+    if(i < text.length){
+
+      element.innerHTML += text.charAt(i);
+
+      i++;
+
+      setTimeout(type, speed);
+
+    }else{
+
+      document.getElementById("loadingWrap")
+.style.display = "block";
+
+startLoadingGlitch();
+    }
+
+  }
+
+  type();
+}
 function createStars(){
   const canvas = document.getElementById("starsCanvas");
   const ctx = canvas.getContext("2d");
