@@ -333,5 +333,60 @@ margin-top:10px;
 50%{
 transform:translateY(-10px);
 }
+#finalTransition{
+  position:fixed;
+  inset:0;
+  background: radial-gradient(circle at top, #0b1a3a, #050814);
+  color:white;
+  z-index:99999;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:40px;
+}
+
+#starsCanvas{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+}
+
+#finalText{
+  max-width:800px;
+  font-size:18px;
+  line-height:1.7;
+  white-space:pre-line;
+  z-index:2;
+  text-shadow:0 0 10px rgba(255,255,255,0.3);
+}
+
+#loadingWrap{
+  margin-top:30px;
+  z-index:2;
+}
+
+#bar{
+  width:300px;
+  height:10px;
+  background:#1b2a4a;
+  border-radius:20px;
+  overflow:hidden;
+  margin:10px auto;
+}
+
+#barFill{
+  width:99%;
+  height:100%;
+  background:linear-gradient(90deg,#7aa7ff,#ffffff);
+}
+
+#toBeContinued{
+  margin-top:10px;
+  opacity:0.9;
+}
 }
 
