@@ -224,6 +224,7 @@ createConfetti();
 };
 
 }
+});
 document.addEventListener("DOMContentLoaded", () => {
   const door = document.getElementById("finalDoor");
 
@@ -363,6 +364,6 @@ function createStars(){
   draw();
 }
 
-});
+
 
 
