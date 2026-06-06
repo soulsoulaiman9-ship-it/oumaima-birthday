@@ -297,6 +297,7 @@ animation:pulse 2s infinite;
 50%{
 transform:scale(1.2);
 }
+}
   .sparkle{
 position:fixed;
 pointer-events:none;
@@ -313,6 +314,7 @@ transform:scale(1);
 to{
 opacity:0;
 transform:translateY(-20px) scale(1.8);
+}
 }
 #giftBox{
 font-size:120px;
@@ -332,4 +334,4 @@ margin-top:10px;
 transform:translateY(-10px);
 }
 }
-}
+
