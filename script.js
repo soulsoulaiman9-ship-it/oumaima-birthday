@@ -324,7 +324,7 @@ This exhibit will remain open indefinitely.
 `;
 
   typeWriter(text, 30);
-}
+
 function startLoadingGlitch(){
   let percent = 99;
   const loadingText = document.getElementById("loadingText");
